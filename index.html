@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talusan Office System</title>
+</head>
+<body>
+
+<h1>Talusan Office System</h1>
+
+<form id="loginForm">
+<label>Username:</label>
+<input id="username" type="text" required>
+
+<br><br>
+
+<label>Password:</label>
+<input id="password" type="password" required>
+
+<br><br>
+
+<button type="submit">Login</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+const form = document.getElementById("loginForm");
+const message = document.getElementById("message");
+
+form.addEventListener("submit", function(event) {
+event.preventDefault();
+
+const username =
+document.getElementById("username").value;
+
+const password =
+document.getElementById("password").value;
+
+if (username === "admin" && password === "12345") {
+message.textContent = "Login successful!";
+} else {
+message.textContent = "Invalid username or password.";
+}
+});
+</script>
+
+</body>
+</html>
